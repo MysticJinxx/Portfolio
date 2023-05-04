@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>DishongDevelopment &nbsp; | &nbsp; Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./Stylesheets/Portfolio_Website.css">
+    </head>
+    <!--END HEAD-->
+
+    <!--BODY-->
+    <body class="Background">
+
+        <!--NAVBAR-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+        <!--NAVBAR-->
+
+        <!--Space Added-->
+        <br>
+        <br>
+
+        <!--HOME/BACKGROUND VIDEO-->
+        <div id="Home">
+            <video autoplay muted loop id="Coding_Video">
+                <source src="Videos/Coding_Video.mp4" type="video/mp4">
+                <!--Display meessage if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <!--END HOME/BACKGROUND VIDEO-->
+
+        <!--VIDEO TEXT-->
+        <div class="Video-Text">
+            <h1 class="white-text">Joshua Dishong's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <br>
+                    <br>My name is Joshua Dishong. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+        <!--END VIDEO TEXT-->
+
+        <!--ABOUT SECTION-->
+        <div class="Row" id="About">
+            <div class="Column_2"> <!--Left-->
+                <img src="Images/Coding_Image.jpg" alt="">
+            </div>
+            <div class="Column_1"> <!--Right-->
+                <h1>About</h1>
+                <p>
+                    I am a full-stack developer with experience in the Unity and Unreal 5 game engines.
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s
+                    Game Developer Boot Camp. I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, C#, SQL and more.
+                    <br>
+                    <br>I am passionate, hardworking and would love to work with you on your project! <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--END ABOUT SECTION-->
+
+        <!--GITUHUB SECTION-->
+        <div class="Row" id="GitHub">
+            <!--Left-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/MysticJinxx" target="_blank">My GitHub!</a></p>
+                </p>
+            </div>
+            <!--Right-->
+            <div class="Column_2">
+                <a href="https://github.com/MysticJinxx" target="_blank">
+                    <img src="./Images/GitHub_Image.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!--END GITUHUB SECTION-->
+
+        <!--CONTACT SECTION-->
+        <div class="Row" id="Contact">
+            <!--Left-->
+            <div class="Column_2 Column_tall">
+                <img src="./Images/Email_Image.jpg" alt="Contact_Image">
+            </div>
+            <!--Right-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <form action="https://formspree.io/f/mrgvjlkp" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+        <!--END CONTACT SECTION-->                
+                </form>
+            </div>
+        </div>
+
+        <!--FOOTER SECTION-->
+        <footer>
+            <p>
+                <p class="center">Joshua Dishong &nbsp; | &nbsp; 2023</p>
+            </p>
+        </footer>
+
+
+        <!--END FOOTER SECTION-->
+    </body>
+
+    <!--END BODY-->
+</html>
