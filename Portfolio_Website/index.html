@@ -4,8 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width" />
-        <title>DishongDevelopment &nbsp; | &nbsp; Portfolio</title>
+        <title>Dishong Development &nbsp; | &nbsp; Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./Stylesheets/Portfolio_Website.css">
+        <link rel="shortcut icon" type="img/jpg" href="Images/coding_icon.png">
     </head>
     <!--END HEAD-->
 
@@ -15,9 +16,10 @@
         <!--NAVBAR-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
         <!--NAVBAR-->
 
@@ -41,13 +43,75 @@
             <strong>
                 <p class="center">
                     <br>
-                    <br>My name is Joshua Dishong. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>My name is Joshua Dishong. I am a full-stack software developer, with added experience in Unity and Unreal Engine.
                     <br>
                     <br> Thank you for stopping by and enjoy!
                 </p>
             </strong>
+
+                    <!--SLIDESHOW SECTION-->
+                    <div id="Slideshow">
+                        <div id="Slideshow_Background">
+                            <div id="Slideshow_Container">
+                                <!-- Slide 1 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/me.jpg" alt="">
+                                    <div class="text">I'm available to assist you on your project!</div>
+                                </div>
+                                <!-- Slide 2 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" alt="">
+                                    <div class="text">I am a full-stack software developer, <br> trained in:<br>HTML, CSS, JavaScript.</div>
+                                </div>
+                                <!-- Slide 3 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/C_Sharp_and_Dot_NET.png" alt="">
+                                    <div class="text">C#, .NET Framework, ASP.NET, MVC.</div>
+                                </div>
+                                <!-- Slide 4 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/SQL_and_Database.jpg" alt="">
+                                    <div class="text">Back end development, databases and SQL.</div>
+                                </div>
+                                <!-- Slide 5 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/Unity.png" alt="">
+                                    <div class="text">C# and Unity</div>
+                                </div>
+                                <!-- Slide 6 of 7 -->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/UnrealEngine.jpg" alt="">
+                                    <div class="text">C++ and Unreal Engine</div>
+                                </div>
+                                <!-- Slide 7 of 7-->
+                                <div class="mySlides fade">
+                                    <img class="Slideshow_Images" src="Images/Email_Image.jpg" alt="">
+                                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                                </div>
+                                <!-- Previous and Next buttons -->
+                                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            <br> <!-- Adds space between the slideshow images and the dots -->
+                    
+                            <!-- Slideshow dots -->
+                            <div style="text-align: center;">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                                <span class="dot" onclick="currentSlide(4)"></span>
+                                <span class="dot" onclick="currentSlide(5)"></span>
+                                <span class="dot" onclick="currentSlide(6)"></span>
+                                <span class="dot" onclick="currentSlide(7)"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /SLIDESHOW SECTION-->
+
         </div>
         <!--END VIDEO TEXT-->
+
+
 
         <!--ABOUT SECTION-->
         <div class="Row" id="About">
@@ -62,7 +126,7 @@
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s
                     Game Developer Boot Camp. I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, C#, SQL and more.
                     <br>
-                    <br>I am passionate, hardworking and would love to work with you on your project! <a href="#Contact">Contact</a> me below!
+                    <br>I am passionate, hardworking and would love to work with you on your project! <a onclick="openForm()" class="contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -90,27 +154,29 @@
 
         <!--END GITUHUB SECTION-->
 
-        <!--CONTACT SECTION-->
-        <div class="Row" id="Contact">
-            <!--Left-->
-            <div class="Column_2 Column_tall">
-                <img src="./Images/Email_Image.jpg" alt="Contact_Image">
-            </div>
-            <!--Right-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <form action="https://formspree.io/f/mrgvjlkp" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-        <!--END CONTACT SECTION-->                
+        <!-- CONTACT FORM -->
+        <div id="Contact">
+            <button type="button" onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mrgvjlkp" method="POST" class="form-container">
+                    <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Full Name" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Phone Number" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Email" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Please write your message to me here" name="message">
+        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
+        
+        <!-- /CONTACT FORM -->
 
         <!--FOOTER SECTION-->
         <footer>
@@ -121,6 +187,7 @@
 
 
         <!--END FOOTER SECTION-->
+        <script src="JS/portfolioWebsite.js"></script>
     </body>
 
     <!--END BODY-->
