@@ -6,7 +6,7 @@ function openForm() {
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
-
+var slideIndex = 0;
 // Function that displays the first image in the slideshow when the page loads.
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -35,6 +35,7 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block"; // This displays the image in the slideshow
     dots[slideIndex - 1].className += " active"; // This adds the active styling to the dot associated with the image
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
 // This will close the contact form when the user clicks off of it
