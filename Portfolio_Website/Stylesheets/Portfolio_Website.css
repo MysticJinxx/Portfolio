@@ -59,6 +59,11 @@ h1:hover {
     color: #fff;
 }
 
+/* Link Text */
+a:visited {
+    color: aqua;
+}
+
 /* Paragraph Elements */
 p {
     font-family: Perpetua, Rockwell Extra Bold;
@@ -70,21 +75,21 @@ p {
 }
 
 /* Paragraph Hover Effects */
-p:hover {
+/*p:hover {
     transition: transform 1s;
     transform: scale(1.01);
 }
-
+*/
 /* Center class - applies to all centered text */
 .center {
     text-align: center;
 }
 
 /* Center hover effects */
-.center:hover {
+/*.center:hover {
     transition: transform 2s;
     transform: scale(1.1);
-}
+}*/
 
 /* Anchor Elements */
 a {
